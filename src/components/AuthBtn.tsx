@@ -1,7 +1,8 @@
 'use client'
-import { authClient, signOut, useSession } from '@/lib/auth-client';
+import { signOut, useSession } from '@/lib/auth-client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const AuthBtn = () => {
@@ -20,7 +21,9 @@ const AuthBtn = () => {
                 user ? <div className="absolute right-4 top-4 flex items-center gap-2">
                     <div className="avatar">
                         <div className="ring-primary ring-offset-base-100 w-14 rounded-full ring-2 ring-offset-2">
-                            <img alt="User Profile" src={user?.image} />
+                            {user?.image && (
+                                <Image alt="User Profile" src={user.image} width={56} height={56} />
+                            )}
                         </div>
                     </div>
                     <div>

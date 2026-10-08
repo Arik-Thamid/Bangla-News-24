@@ -2,13 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images: {
-    remotePatterns:[
+   images: {
+    remotePatterns: [
       {
         protocol: "https",
-        hostname: "ichef.bbci.co.uk"
-      }
-    ]
+        hostname: "imgs.search.brave.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ichef.bbci.co.uk",
+      },
+    ],
   },
   
   experimental: {
